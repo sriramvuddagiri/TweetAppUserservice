@@ -90,6 +90,7 @@ public class UserServiceController {
             @ApiResponse(responseCode = "204",description = "No users Found"),
             @ApiResponse(responseCode = "500",description = "Some Exception Occured")
     })
+    
     @GetMapping(value = "/users/search/{username}")
     public ResponseEntity<Object> searchByUsername(@RequestHeader("Authorization") String token,@PathVariable String username){
         log.info("inside user service to search user by given username");
