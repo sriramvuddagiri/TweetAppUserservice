@@ -94,9 +94,9 @@ public class UserServiceController {
     public ResponseEntity<Object> searchByUsername(@RequestHeader("Authorization") String token,@PathVariable String username){
         log.info("inside user service to search user by given username");
         List<UserData> userData=userService.searchByUsername(token,username);
-        if(!userData.isEmpty())
+        //if(!userData.isEmpty())
             return new ResponseEntity<>(userData,HttpStatus.OK);
-        return new ResponseEntity<>("No User Found based on Request Try Again!!!",HttpStatus.OK);
+        //return new ResponseEntity<>("No User Found based on Request Try Again!!!",HttpStatus.OK);
     }
 
     @Operation(summary = "Getting all Users",description = "A get request for getting all Users",tags = {"User Service API"})
