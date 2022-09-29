@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "4b46797d-9ee6-42d5-8c77-68e6374fd1be",
+		"name": "UserService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Sriram\",\r\n    \"lastName\":\"Vuddagiri\",\r\n    \"email\":\"sriram1@gmail.com\",\r\n    \"userName\":\"sriram1\",\r\n    \"password\":\"Ask@5845\",\r\n    \"confirmPassword\":\"Ask@5845\",\r\n    \"contactNo\":9986544689\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/apps/v1.0/tweets/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"apps",
+						"v1.0",
+						"tweets",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"sriram1\",\r\n    \"password\":\"Ask@5845\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/apps/v1.0/tweets/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"apps",
+						"v1.0",
+						"tweets",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All users",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/apps/v1.0/tweets/users/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"apps",
+						"v1.0",
+						"tweets",
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by Username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzcmlyYW0xIiwiZXhwIjoxNjYxODU4OTc3LCJpYXQiOjE2NjE4NTUzNzd9.OABFYCTsfrukhOCLlFKqzkEhiuRg2z7bLUHHRaLxMMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/apps/v1.0/tweets/users/search/sr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"apps",
+						"v1.0",
+						"tweets",
+						"users",
+						"search",
+						"sr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"Tell@8757\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/apps/v1.0/tweets/sriram2/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"apps",
+						"v1.0",
+						"tweets",
+						"sriram2",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate the user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
